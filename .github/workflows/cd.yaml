@@ -47,7 +47,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-            script: |
+          script: |
               docker pull ${{ env.IMAGE_NAME }}:latest
               docker stop ${{ env.CONTAINER_NAME }} || true
               docker rm ${{ env.CONTAINER_NAME }} || true
